@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400..700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: "League Spartan", serif;
+    font-size: 15px;
+    background: url("images/bg-pattern-top-desktop.svg") top left no-repeat, url("images/bg-pattern-bottom-desktop.svg") bottom right no-repeat;
+}
+main {
+    min-height: 100vh;
+    width: 100%;
+    margin-top: 80px;
+}
+section {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(2,1fr);
+}
+/* note section */
+
+.note-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 53%;
+    margin: auto;
+}
+.note-heading {
+    font-size: 50px;
+    line-height: 0.9;
+    letter-spacing: -2px;
+    color: hsl(300, 43%, 22%);
+}
+.note {
+    padding-top: 20px;
+    color: hsl(303, 10%, 53%);
+    font-weight: 500;
+}
+
+/* rating section */
+
+.rating-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    width: 60%;
+}
+
+.rating-box {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 16px;
+    background-color: hsl(300, 24%, 96%); 
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+.rating-box:nth-child(1) {
+    transform: translateX(-20%);
+}
+.rating-box:nth-child(2) {
+    transform: translateX(-10%);
+}
+.stars {
+    padding-left: 10px;
+}
+.star {
+padding-left: 5px;
+width: 20px;
+}
+h2 {
+    margin-left: 30px;
+    font-size: 16px;
+    color: hsl(300, 43%, 22%);
+}
+
+/* card section */
+.comment-section {
+    display: flex;
+    justify-content: center;
+    width: 76%;
+    margin: 60px auto;
+}
+.cards {
+    padding: 20px;
+    margin-left: 30px;
+    background-color: hsl(300, 43%, 22%);
+    height: auto;
+    border-radius: 10px;
+    width: 40%;
+}
+.cards:nth-child(2) {
+    transform: translateY(10%);
+}
+.cards:nth-child(3) {
+    transform: translateY(20%);
+}
+
+.images {
+    width: 40px;
+    border-radius: 50%;
+}
+.card-heading {
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.name-buyer {
+    margin-left: 20px;
+}
+
+.comment {
+    padding: 10px;
+}
+span {
+    color: hsla(333, 80%, 67%, 0.70);
+}
+.comment, h3 {
+    color:  hsl(0, 0%, 100%);
+}
+h3, span {
+    font-size: 15px;
+}
+
+/* author */
+.attribution {
+    font-size: 11px;
+    text-align: center;
+  }
+  .attribution a {
+    color: hsl(228, 45%, 44%);
+  }
+
+  /* media at 400px */
+
+  @media screen and (max-width: 480px) {
+    body {
+        background: url("images/bg-pattern-top-mobile.svg") top left no-repeat, url("images/bg-pattern-bottom-mobile.svg") bottom right no-repeat;
+    }
+    section {
+        display: block;
+    }
+    .note-section {
+        width: 85%;
+        text-align: center;
+    }
+    .note-heading {
+        font-size: 35px;
+    }
+   
+
+    .rating-box {
+        flex-direction: column;
+        padding: 16px;
+    }
+    .rating-section {
+        margin: 30px auto;
+        width: 85%;
+    }
+    .rating-box:nth-child(1) {
+        transform: translateX(0);
+    }
+    .rating-box:nth-child(2) {
+        transform: translateX(0);
+    }
+    h2 {
+        margin-left: 0;
+        margin-top: 5px;
+        font-size: 15px;
+    }
+
+
+    .comment-section {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .cards {
+        padding: 10px;
+        margin-left: 0;
+        margin: auto;
+        width: 85%;
+    }
+    .images {
+        width: 34px;
+        border-radius: 50%;
+    }
+    .card-heading {
+        margin-top: 15px;
+        padding-left: 10px;
+    }
+   }
